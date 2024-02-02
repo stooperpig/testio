@@ -15,6 +15,7 @@ const readGame = (gameId: string): Games => {
 
 export const writeGame = (games: Games): void => {
     const file = path.join(process.cwd(), 'files/data/games.json');
+    console.log('file: ' + file);
     writeFileSync(file, JSON.stringify(games));
 }
 
