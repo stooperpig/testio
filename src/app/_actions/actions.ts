@@ -26,7 +26,7 @@ export async function updateGames(): Promise<Games> {
     games.count = count;
     ++count;
 
-    writeGame(games);
+    //writeGame(games);
 
     return games;
 }
