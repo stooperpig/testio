@@ -1,9 +1,12 @@
 'use client'
 
-export default function Home() {
+import { updateGames } from "./_actions/actions";
 
-  const doIt = () => {
+export default function Home() {
+  const doIt = async () => {
     console.log("Do It!");
+    const games = await updateGames();
+    console.log(JSON.stringify(games));
   }
 
   return (
