@@ -10,13 +10,13 @@ export interface Games {
 }
 
 const readGame = (gameId: string): Games => {
-    const file = path.join(process.cwd(), `files/data/games.json`);
+    const file = path.join(process.cwd(), 'files/data/games.json');
     const games: Games = JSON.parse(readFileSync(file, 'utf8'));
     return games;
 }
 
 export const writeGame = (games: Games): void => {
-    const file = path.join(process.cwd(), `files/data/games.json`);
+    const file = path.join(process.cwd(), 'files/data/games.json');
     writeFileSync(file, JSON.stringify(games));
 }
 
